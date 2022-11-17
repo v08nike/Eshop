@@ -1,0 +1,31 @@
+<h1>Application E-Commerce</h1>
+<app-products></app-products>
+<div [hidden]="hideInter">
+    <h2>
+        Interpolation 
+    </h2>
+    <p>person:{{person}}</p>
+    <p>age: {{age}}</p>
+    <p>address: {{address.street}} , {{address.city}}</p>
+    <p>Email: {{getEmail()}}</p>
+</div>
+<div>
+    <h2>
+        Property Binding 
+    </h2>
+
+    <p [hidden]="hide">Hello {{person}} </p>
+
+    <button [disabled]="activated">Envoyer</button>
+</div>
+<div>
+<h2>Event Binding </h2>
+<button (click)="hideInterpolation()"> 
+    Hide Interpolation 
+</button>
+</div>
+<div>
+<h2>Tow way DataBinding</h2>
+<input type ="text" name="name" placeholder="person" [(ngModel)]="person">
+{{person}}
+</div>
